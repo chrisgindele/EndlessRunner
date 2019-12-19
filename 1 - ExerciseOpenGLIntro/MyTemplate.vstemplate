@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>1 - ExerciseOpenGLIntro</Name>
+    <Description>Exercise for lecture CG</Description>
+    <ProjectType>CSharp</ProjectType>
+    <Icon>__TemplateIcon.ico</Icon>
+    <SortOrder>0</SortOrder>
+    <CreateInPlace>true</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="1 - ExerciseOpenGLIntro.csproj">
+      <ProjectItem>MyWindow.cs</ProjectItem>
+      <ProjectItem>Program.cs</ProjectItem>
+      <ProjectItem>readme.md</ProjectItem>
+      <ProjectItem>screenshot.png</ProjectItem>
+      <ProjectItem>Framework\FileResourceProvider.cs</ProjectItem>
+      <ProjectItem>Framework\Input.cs</ProjectItem>
+      <ProjectItem>Framework\IReadOnlyRectangle.cs</ProjectItem>
+      <ProjectItem>Framework\IReadOnlyRectangleExtensions.cs</ProjectItem>
+      <ProjectItem>Framework\IResourceProvider.cs</ProjectItem>
+      <ProjectItem>Framework\Rectangle.cs</ProjectItem>
+      <ProjectItem>Framework\ResourcesGL.cs</ProjectItem>
+      <ProjectItem>Framework\Shapes.cs</ProjectItem>
+      <ProjectItem>Framework\SpriteSheetTools.cs</ProjectItem>
+      <ProjectItem>Framework\Texture2D.cs</ProjectItem>
+      <ProjectItem>Framework\Transformation.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

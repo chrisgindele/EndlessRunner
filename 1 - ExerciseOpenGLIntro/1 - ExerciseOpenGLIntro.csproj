@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>Example</RootNamespace>
+    <ApplicationIcon />
+    <StartupObject />
+    <FileVersion>2019.11.15.0938</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="screenshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="screenshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="OpenTK.NetStandard" Version="1.0.4" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="7.14.4" />
+    <PackageReference Include="OpenTK.NetStandard" Version="1.0.4" />
+  </ItemGroup>
+</Project>
