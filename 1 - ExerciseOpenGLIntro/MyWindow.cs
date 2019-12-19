@@ -25,7 +25,7 @@ namespace Example
 
 		private readonly KeyboardState keyboard;
         private RectangleShape[] rectangles = new RectangleShape[9];
-        private RectangleShape playerChar = new RectangleShape(new Vector2(-0.5f,-0.5f),new Vector2(0.05f,0.1f),new Vector3(0f,0f,0f),new Vector3(0f, 0f, 0f));
+        private RectangleShape playerChar = new RectangleShape(new Vector2(-0.5f,-0.5f),new Vector2(0.05f,0.1f),new Vector3(0f,0f,0f));
         private bool alive = true; //if player dies, set alive to false to not update game objects and pause the game
         private float spawnTimer; //respawns obstacles
 
@@ -39,11 +39,11 @@ namespace Example
 
 			GL.Clear(ClearBufferMask.ColorBufferBit); // clear the screen
             
-            DrawRectangle(new Vector2(-1f, -1f), new Vector2(2f, 0.5f), new Vector3(0f,0f,0f), new Vector3(0f, 0f, 0f)); //floor
+            DrawRectangle(new Vector2(-1f, -1f), new Vector2(2f, 0.5f), new Vector3(0f,0f,0f)); //floor
 
             DrawRectangles(); //obstacles
 
-            DrawRectangle(playerChar.Pos, playerChar.Size, playerChar.Color,playerChar.Color); //player character
+            DrawRectangle(playerChar.Pos, playerChar.Size, playerChar.Color); //player character
 
             SwapBuffers(); // buffer swap needed for double buffering
 		}
@@ -106,7 +106,7 @@ namespace Example
             }
         }
 
-        private void DrawRectangle(Vector2 min, Vector2 size, Vector3 color, Vector3 color2)
+        private void DrawRectangle(Vector2 min, Vector2 size, Vector3 color)
         {
             GL.Begin(PrimitiveType.Quads);
             GL.Color3(color[0], color[1], color[2]);
@@ -114,7 +114,6 @@ namespace Example
             GL.Vertex2(min[0] +(size[0]), min[1]);
             GL.Vertex2(min[0] + (size[0]), min[1] + (size[1]));
             GL.Vertex2(min[0], min[1] + (size[1]));
-            GL.Color3(0f,0f,0f);
             GL.End();
         }
         /// <summary>
@@ -127,9 +126,8 @@ namespace Example
             Vector2 pos = new Vector2(-1.1f, ((float)random.NextDouble()*2f - 1f)*0.7f);
             Vector2 size = new Vector2(((float)random.NextDouble()+0.05f)*0.07f, ((float)random.NextDouble()+0.2f)*0.1f);
             Vector3 color = new Vector3((float)random.NextDouble()-0.2f, (float)random.NextDouble()-0.2f, (float)random.NextDouble()-0.2f);
-            Vector3 color2 = new Vector3((float)random.NextDouble(), (float)random.NextDouble(), (float)random.NextDouble());
 
-            RectangleShape rectangle = new RectangleShape(pos,size,color,color2);
+            RectangleShape rectangle = new RectangleShape(pos,size,color);
             return rectangle;
         }
 
@@ -145,7 +143,7 @@ namespace Example
         {
             for (int i = 0; i < rectangles.Length; i++)
             {
-                DrawRectangle(rectangles[i].Pos,rectangles[i].Size,rectangles[i].Color,rectangles[i].Color2 );
+                DrawRectangle(rectangles[i].Pos,rectangles[i].Size,rectangles[i].Color);
             }
         }
     }

@@ -11,15 +11,13 @@ namespace Example
         public Vector2 Pos { get; private set; }
         public Vector2 Size { get; private set; }
         public Vector3 Color { get; private set; }
-        public Vector3 Color2 { get; private set; }
         public float Velocity { get; private set; }
 
-        public RectangleShape(Vector2 pos, Vector2 size, Vector3 color, Vector3 color2)
+        public RectangleShape(Vector2 pos, Vector2 size, Vector3 color)
         {
             Size = size;
             Pos = pos;
             Color = color;
-            Color2 = color2;
         }
 
         internal void SetPos(Vector2 pos)
