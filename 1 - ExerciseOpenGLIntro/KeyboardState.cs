@@ -24,37 +24,7 @@ namespace Example
 
         public RectangleShape MovePlayer(RectangleShape playerChar, float time)
         {
-            /*
-            if (this.IsKeyDown(Key.A) || this.IsKeyDown(Key.Left))
-            {
-                if (playerChar.GetPos()[0] >= -1)
-                {
-                    playerChar.SetPos(new Vector2(playerChar.GetPos()[0] - time, playerChar.GetPos()[1]));
-                }
-            }
-            if (this.IsKeyDown(Key.W) || this.IsKeyDown(Key.Up))
-            {
-                if (playerChar.GetPos()[1] + playerChar.GetSize()[1] <= 1)
-                {
-                    playerChar.SetPos(new Vector2(playerChar.GetPos()[0], playerChar.GetPos()[1] + time));
-                }
-            }
-            if (this.IsKeyDown(Key.S) || this.IsKeyDown(Key.Down))
-            {
-                if (playerChar.GetPos()[1] >= -1)
-                {
-                    playerChar.SetPos(new Vector2(playerChar.GetPos()[0], playerChar.GetPos()[1] - time));
-                }
-            }
-            if (this.IsKeyDown(Key.D) || this.IsKeyDown(Key.Right))
-            {
-                if (playerChar.GetPos()[0] + playerChar.GetSize()[0] <= 1)
-                {
-                    playerChar.SetPos(new Vector2(playerChar.GetPos()[0] + time, playerChar.GetPos()[1]));
-                }
-            }
-            */
-            if (this.IsKeyDown(Key.Space))
+            if (IsKeyDown(Key.Space))
             {
                 playerChar.AddVelocity(5.5f);
             }
