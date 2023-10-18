@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -22,7 +22,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="7.14.4" />
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="13.3.0" />
     <PackageReference Include="OpenTK.NetStandard" Version="1.0.4" />
   </ItemGroup>
 </Project>
